@@ -4,32 +4,32 @@ import java.util.Collection;
 public class Conta {
     private String numero;
 
-    private Double valorCaixa;
+    private Double valorCX;
 
     public Collection<Debito> debito = new ArrayList<Debito>();
     public Collection<Credito> credito = new ArrayList<Credito>();
-    public Conta (String numero , Double valorCaixa){
+    public Conta (String numero , Double valorCX){
         this.numero = numero;
-        this.valorCaixa = valorCaixa;
+        this.valorCX = valorCX;
 
     }
 
     public Double depositar(Credito valorDepositado){
 
-        this.valorCaixa += valorDepositado.getValor();
-        return this.valorCaixa;
+        this.valorCX += valorDepositado.getValor();
+        return this.valorCX;
     }
 
     public Double sacar(Debito valorSacado) {
-        if (valorSacado.getValor() > this.valorCaixa) {
+        if (valorSacado.getValor() > this.valorCX) {
 
             System.out.println("Sem saldo para sacar " + numero);
-            return this.valorCaixa;
+            return this.valorCX;
         }
 
-        this.valorCaixa -= valorSacado.getValor();
+        this.valorCX -= valorSacado.getValor();
 
-        return this.valorCaixa;
+        return this.valorCX;
     }
     public String getNumero() {
         return numero;
@@ -39,11 +39,11 @@ public class Conta {
         this.numero = numero;
     }
 
-    public Double getValorCaixa() {
-        return valorCaixa;
+    public Double getValorCX() {
+        return valorCX;
     }
 
-    public void setValorCaixa(Double valorCaixa) {
-        this.valorCaixa = valorCaixa;
+    public void setValorCX(Double valorCX) {
+        this.valorCX = valorCX;
     }
 }

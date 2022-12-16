@@ -14,17 +14,17 @@ public class Executar {
 
         FuncaoCargo gerente = new FuncaoCargo();
 
-        gerente.setNomeCargo("Gerente");
+        gerente.setCargoNome("Gerente");
 
         FuncaoCargo atendente = new FuncaoCargo();
 
-        atendente.setNomeCargo("Atendente");
+        atendente.setCargoNome("Atendente");
 
         Funcionario f1 = new Funcionario("774.435.601-00","Aurelio","984352410",1000.);
-        f1.setCargoFuncionario(atendente);
+        f1.setFuncionarioCargo(atendente);
 
         Funcionario f2 = new Funcionario("690.984.630-22","Edgar","88764565",3000.);
-        f2.setCargoFuncionario(gerente);
+        f2.setFuncionarioCargo(gerente);
 
 
         ContaCorrente corrente1 = new ContaCorrente("111", 1500. , 3000.);

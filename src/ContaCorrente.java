@@ -19,7 +19,7 @@ public class ContaCorrente extends Conta{
 
         Object[] i = {contaEnviadora,contaAlvo};
 
-        if(valor > contaEnviadora.getValorCaixa()){
+        if(valor > contaEnviadora.getValorCX()){
 
             System.out.println("Conta de Numero " + contaEnviadora.getNumero() + " sem Saldo:");
 
@@ -27,15 +27,15 @@ public class ContaCorrente extends Conta{
 
         }
 
-            contaAlvo.setValorCaixa(contaAlvo.getValorCaixa() + valor);
-            contaEnviadora.setValorCaixa(contaEnviadora.getValorCaixa() - valor);
+            contaAlvo.setValorCX(contaAlvo.getValorCX() + valor);
+            contaEnviadora.setValorCX(contaEnviadora.getValorCX() - valor);
 
 
     return i;
     }
 
     public Double calcularSaldo(ContaCorrente conta){
-        Double total = conta.getValorCaixa();
+        Double total = conta.getValorCX();
 
         for (Debito e : debito){
             total -= e.getValor();

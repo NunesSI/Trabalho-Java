@@ -1,15 +1,13 @@
 public class ContaPoupanca extends Conta{
-    private Double rentabilidade;
+    private Double rentavel;
 
-    public ContaPoupanca(String numero, Double valorCaixa, Double rentabilidade) {
+    public ContaPoupanca(String numero, Double valorCaixa, Double rentavel) {
         super(numero, valorCaixa);
-        this.setRentabilidade(rentabilidade);
+        this.setRentavel(rentavel);
     }
 
-
     public Double calcularSaldo(ContaPoupanca conta){
-        Double total = conta.getValorCaixa();
-
+        Double total = conta.getValorCX();
 
         for (Debito e : debito){
             total -= e.getValor();
@@ -18,15 +16,13 @@ public class ContaPoupanca extends Conta{
         for (Credito e : credito){
             total += e.getValor();
         }
-
         return total;
     }
-
-    public Double getRentabilidade() {
-        return rentabilidade;
+    public Double getRentavel() {
+        return rentavel;
     }
 
-    public void setRentabilidade(Double rentabilidade) {
-        this.rentabilidade = rentabilidade;
+    public void setRentavel(Double rentavel) {
+        this.rentavel = rentavel;
     }
 }

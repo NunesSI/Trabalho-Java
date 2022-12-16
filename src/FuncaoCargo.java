@@ -1,11 +1,11 @@
 public class FuncaoCargo {
-    private String nomeCargo;
+    private String CargoNome;
 
-    public String getNomeCargo() {
-        return nomeCargo;
+    public String getCargoNome() {
+        return CargoNome;
     }
 
-    public void setNomeCargo(String nomeCargo) {
-        this.nomeCargo = nomeCargo;
+    public void setCargoNome(String cargoNome) {
+        this.CargoNome = cargoNome;
     }
 }
